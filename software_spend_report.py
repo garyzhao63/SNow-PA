@@ -5,8 +5,9 @@ import csv
 #command line argument 
 fName = sys.argv[1]
 
-vendorDict = defaultdict(dict)
-#vendorDict = {}
+# Initialize vendorDict to a dict of dict, 
+# and initialize each dict in vendorDict to a dict of int
+vendorDict = defaultdict(lambda: defaultdict(int))
 
 with open(fName) as csvfile:
     reader = csv.DictReader(csvfile)
@@ -14,9 +15,8 @@ with open(fName) as csvfile:
         currVendor = row['Vendor']
         currProduct = row['Product']
 
-        print row['Amount']
-
-        vendorDict[currVendor][currProduct] = row['Amount']
+        #add the spending to the current spending
+        vendorDict[currVendor][currProduct] += int(row['Amount'])
 
 
 print vendorDict
