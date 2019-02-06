@@ -19,7 +19,7 @@ def insertRowToDict(row):
     #add the spending to the current spending
     vendorDict[currVendor][currProduct] += float(row['Amount'])
 
-######################################################
+###############################################################
 
 #File name from command line
 fName = sys.argv[1]
@@ -42,7 +42,7 @@ for vendor, productDict in sorted(vendorDict.items()):
     #Loop through productDict in alphabetical order
     for product, amount in sorted(productDict.items()):
         vendorAmount += amount;
-        productStr += ' ' + product + ' ' + numToDollars(truncateDecimals(amount)) + '\n'
+        productStr += '  ' + product + ' ' + numToDollars(truncateDecimals(amount)) + '\n'
 
 
     vendorStr = vendor + ' ' + numToDollars(truncateDecimals(vendorAmount))
