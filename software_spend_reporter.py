@@ -39,7 +39,7 @@ for vendor, productDict in sorted(vendorDict.items()):
     for product, productAmount in sorted(productDict.items()):
         # Add the product spending to the vendor's total spending
         vendorAmount += productAmount;
-        productStr += '  ' + product + ' ' + numToDollars(truncateDecimals(amount)) + '\n'
+        productStr += '  ' + product + ' ' + numToDollars(truncateDecimals(productAmount)) + '\n'
 
     vendorStr = vendor + ' ' + numToDollars(truncateDecimals(vendorAmount))
 
