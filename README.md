@@ -16,11 +16,11 @@ First, download this as a zip file and unzip it, then
 
 Example usage:
 ```
-python ./software_spend_reporter /path/to/inputfile.csv
+python ./software_spend_reporter.py /path/to/inputfile.csv
 ```
 Example using files in the resources folder:
 ```
-python ./software_spend_reporter resources/input_file.csv
+python ./software_spend_reporter.py resources/input_file.csv
 ```
 
 ### Running the tests
