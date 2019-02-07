@@ -12,8 +12,7 @@ brew install python@2
 
 ### Running the application
 
-First, download this as a zip file and unzip it, then:
-
+First, download this as a zip file and unzip it, then
 
 Example usage:
 ```
